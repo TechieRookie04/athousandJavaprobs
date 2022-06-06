@@ -16,7 +16,6 @@ public class dollarPattern {
 						 System.out.print(a); 
 					 }
 				 }	
-				 
 				 else {
 				 System.out.print(a);
 				 }
