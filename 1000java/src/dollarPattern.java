@@ -5,7 +5,7 @@ public class dollarPattern {
 		// TODO Auto-generated method stub
 		int i,j;
 		//String a[][] = new String[4][4];
-		String a= "$ ";
+		String a= "$";
 		for(i=1;i<=4;i++) {
 			 for(j=1;j<=4;j++) { 
 				 if(i==2 || i==3) {
