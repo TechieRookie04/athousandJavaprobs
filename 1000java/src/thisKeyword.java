@@ -10,7 +10,7 @@ class Emp{
 	
 	int eid;
 	int salary;
-	String ceo;
+	 static String ceo;
 	
 	public void show() {
 		
@@ -35,6 +35,7 @@ public class thisKeyword {
 		rahul.salary=5000;
 		rahul.ceo="Mahesh";
 		
+		rahul.ceo="nikita";
 		rahul.show();
 		navin.show();
 	}
