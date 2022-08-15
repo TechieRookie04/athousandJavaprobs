@@ -11,7 +11,7 @@ public class largestAmong3 {
 		System.out.println("Enter number of numbers: ");
 		n=sc.nextInt();
 		System.out.println("Enter elements of array: ");
-		int a[]= new int[2];
+		int a[]= new int[3];
 		for(int i=0;i<n;i++) {
 			a[i]=sc.nextInt();
 			System.out.println("inside loop");
@@ -19,6 +19,18 @@ public class largestAmong3 {
 		System.out.println("Array elements are: ");
 		for(int i=0;i<n;i++) {
 			System.out.println(a[i]);
+		}
+		for(int i=1;i<=n;i++) {
+		if(a[i-1]>a[i] && a[i-1]>a[i+1]) {
+			System.out.println(" greatest number: "+a[i-1]);
+			
+		}
+		else if(a[i]>a[i-1] && a[i]>a[i+1]) {
+			System.out.println(" greatest number: "+a[i]);
+		}
+		else {
+			System.out.println(" greatest number: "+a[i+1]);
+		}
 		}
 
 	}
