@@ -8,15 +8,15 @@
  */
 
 class Outer{
-	int a;
-	public void show() {
+	static int a;
+	public static void show() {
 		
 		
 	}
-	class Inner{
+	static class Inner{ //Outer$Inner.class
 		
 		public void display() {
-			
+			System.out.println("in display");
 		}
 	}
 	
@@ -29,10 +29,13 @@ public class innerDemo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Outer obj=new Outer();
-		obj.show();
+		//obj.show();
 		
-		Outer.Inner obj1=obj.new Inner();//in order to use obj, create with parent class but in order to create constructor, create with outer class object.
-		
+		//Outer.Inner obj1=obj.new Inner();//in order to use obj, create with parent class but in order to create constructor, create with outer class object.
+		//obj1.display();
+		//for static class
+		Outer.Inner obj2=new Outer.Inner();
+		obj2.display();
 	}
 
 }
