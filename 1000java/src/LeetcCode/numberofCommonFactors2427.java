@@ -15,7 +15,7 @@ public class numberofCommonFactors2427 {
 	    int sum=0;
 	    for(int i=1;i*2<=c;i++){
 	        if(a%i==0 && b%i==0){
-	        	 //System.out.println("a%i: "+i+"b%i: "+i);  
+	        	 System.out.println("a%i: "+a/i+"   b%i: "+b/i);  
 	            sum=sum+1;
 	            }
 	        } 

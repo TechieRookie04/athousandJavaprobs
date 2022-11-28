@@ -10,29 +10,57 @@ public class romanToInt {
             a[i] = s.charAt(i); 
         } 
         int val=0;
-        for(int x:a){
-            if(x=='I'){
-                val+=1;
-                System.out.println("val"+val);
-            }
-            else if(x=='V'){
+        for(int x=0;x<a.length;x++){
+            if(a[x]=='I'){
+            		val+=1;
+            	
+                //System.out.println("val"+val);
+                }
+            
+            else if(a[x]=='V'){
                 val+=5;
+                if(x!=0) {
+            	if(a[x-1]=='I')
+            		val-=2;
+                }
             }
-            else if(x=='X'){
-                val+=10;
+            else if(a[x]=='X'){
+            	if(x!=0) {
+            	if(a[x-1]=='I')
+            		val-=2;
+            	}
+            	val+=10;
             }
-            else if(x=='L'){
+            else if(a[x]=='L'){
                 val+=50;
+                if(x!=0) {
+            	if(a[x-1]=='X')
+            		val-=20;
+                }
+
             }
-            else if(x=='C'){
-                val+=100;
-            }
-            else if(x=='D'){
+            else if(a[x]=='C'){
+            	val+=100;
+            	if(x!=0) {
+            	if(a[x-1]=='X')
+            		val-=20;
+            	}
+            	}
+            else if(a[x]=='D'){
                 val+=500;
+                if(x!=0) {
+                if(a[x-1]=='C')
+            		val-=200;
+                }
             }
-            else if(x=='D'){
+            else if(a[x]=='M'){
                 val+=1000;
+                if(x!=0) {
+                if(a[x-1]=='C')
+            		val-=200;
+                }
             }
+            
         }
         return val;
     }
