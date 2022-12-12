@@ -10,10 +10,11 @@ public class countDaysTogether {
 		String arriveBob = "09-16";
 		String leaveBob = "08-19";
 		    int mday[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-		    public int countDaysTogether(string arriveAlice, string leaveAlice, string arriveBob, string leaveBob) {
+	}
+public countDaysTogether(String arriveAlice, String leaveAlice, String arriveBob, String leaveBob) {
 		        int start = Math.max(countDay(arriveAlice),countDay(arriveBob)); // Find the date who arrived later (because we have to find overlapping days)
 		        int last = Math.min(countDay(leaveAlice),countDay(leaveBob)); // Find the date who left earlier
-		        return Math.max(0,last-start+1); // find the overlapping days which will be (last-start+1)
+		        Math.max(0,last-start+1); // find the overlapping days which will be (last-start+1)
 		        
 		    }
 		    
@@ -24,11 +25,12 @@ public class countDaysTogether {
 		        int md[] = {Integer.parseInt(temp[0]),Integer.parseInt(temp[1])}; //Extract Month and date in integer from String "08-18"
 		        int days=0;
 		        for(int i=1;i<md[0];i++){
-		            days+=mday[i-1];   // Calculate number of days till previous month from January
+		            int[] mday = null;
+					days+=mday[i-1];   // Calculate number of days till previous month from January
 		        }
 		        return days+md[1]; // add days from current month
 		    }
 		
 	}
 
-}
+
